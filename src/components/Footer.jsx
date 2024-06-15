@@ -1,20 +1,19 @@
 import Order from "./Order";
-
 const Footer = () => {
   const hour = new Date().getHours();
-  const openHour = 12;
-  const closeHour = 22;
-  const isOpen = hour >= openHour && hour <= closeHour;
+  const openHours = 12;
+  const closeHours = 22;
+  const isOpen = hour >= openHours && hour <= closeHours;
   return (
-    <footer className="footer">
+    <div className="footer">
       {isOpen ? (
-        <Order closeHour={closeHour} />
+        <Order closeHour={closeHours} />
       ) : (
         <p>
-          We're happy to welcome you between {openHour}:00 and {closeHour}:00
+          We're happy to welcome you between {openHours}:00 and {closeHours}:00
         </p>
       )}
-    </footer>
+    </div>
   );
 };
 
