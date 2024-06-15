@@ -1,14 +1,14 @@
-import { useState } from "react";
 import "./App.css";
 import Main from "./components/Main";
+import Header from "./components/Header";
+import Footer from "./components/Footer";
+
 function App() {
-  const [step, setStep] = useState(1);
-  const [count, setCount] = useState(0);
-  let date = new Date("jan 12 2018");
-  date.setDate(date.getDate() + count);
   return (
     <>
+      <Header />
       <Main />
+      <Footer />
     </>
   );
 }
